@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1,
+      .box2 {
+        color: white;
+      }
+      .box1 {
+        /* box-sizing을 border-box로 하면 width/height를 border + padding + content 기준으로 잡는다*/
+        box-sizing: border-box;
+        border: 1px solid black;
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(196, 91, 91);
+      }
+      .box2 {
+        border: 1px solid black;
+        padding: 10px;
+        width: 178px;
+        height: 178px;
+        background-color: rgb(97, 97, 195);
+      }
+      .container {
+        box-sizing: border-box;
+        /* margin : top부터 시계방향(right bottom left 순),
+        뒤의 값을 빼면 앞과 대칭으로 들어감 (top + bottom, right + left)
+        값을 하나만 넣으면 상하좌우 전부 같은값의 margin 
+        auto : 가운데정렬 (좌우만 가능) */
+        margin: 5px auto;
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(86, 174, 110);
+        /* 왼쪽 테두리만 바꿀 때(전방향 가능) */
+        border-left: 5px solid black;
+      }
+      .side {
+        box-sizing: border-box;
+        width: 100px;
+        /* 부모요소 기준으로 %로 크기를 조정할 수 있다 */
+        height: 100%;
+        background-color: rgb(86, 161, 174);
+        /* box-shadow : 수평위치, 수직위치, 흐림정도, 번짐정도, 색깔 순 */
+        box-shadow: 1px 0px 20px 2px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">내용</div>
+    <div class="box2">내용</div>
+    <div class="container">
+      <div class="side"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 구글 웹폰트 */
+      @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Noto+Sans+KR:wght@100;400;700&display=swap");
+      /* 눈누 웹폰트 */
+      @font-face {
+        font-family: "PuradakGentleGothicR";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .text1 {
+        font-family: "Dongle", sans-serif;
+        font-size: 40px;
+        font-weight: 300;
+        /* 색깔은 rgb나 #(16진수 6자리)로 설정 가능 */
+        /* rgba : 4번째 자리에 투명도 설정 가능 */
+        color: rgba(32, 89, 55, 0.693);
+      }
+      .text2 {
+        font-family: "PuradakGentleGothicR";
+        font-size: 16px;
+        font-style: italic;
+        /* 16진수도 4번째 자리(7,8)에 숫자 기입해서 투명도 설정 가능 */
+        color: #d45e2766;
+        line-height: 16px;
+      }
+      .naver-link {
+        font-size: 30px;
+        color: rgb(25, 206, 96);
+        /* 밑줄 없애기(링크는 기본적으로 밑줄이 붙음) */
+        text-decoration: none;
+      }
+      .spacing {
+        letter-spacing: -2px;
+        word-spacing: 15px;
+      }
+    </style>
+    <!-- ctrl + shift + c : 크롬에서 개발자 도구 열기 -->
+  </head>
+  <body>
+    <div class="text1">1. 웹 개발 시작하기</div>
+    <span class="text2">1-1. 웹 개발 알아보기</span><br />
+    <span class="text2">1-2. 웹 개발, 어디서부터 시작할까</span><br />
+    <a href="http://www.naver.com" class="naver-link">네이버</a><br />
+    <div class="spacing">코리아 아이티 아카데미</div>
+  </body>
+</html>
