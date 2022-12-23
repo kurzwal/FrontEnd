@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        /*  wrap : 정렬하다가 꽉차면 밑으로 내림 
+                nowrap : 옆으로만 정렬하고 꽉차면 찌그러짐 */
+        flex-wrap: wrap;
+        /*  flex-direction : 주축의 방향을 바꾸는 역할(아래로 정렬하다가 옆으로 넘김) */
+        /* flex-direction: column; */
+        width: 350px;
+        height: 350px;
+
+        border: 1px solid black;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+      .box {
+        align-self: flex-start;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+      }
+      .long-box {
+        align-self: flex-start;
+        margin: 10px;
+        width: 50px;
+        height: 70px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body bgcolor="gray">
+    <div class="flex-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="long-box"></div>
+      <div class="box"></div>
+      <div class="long-box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
