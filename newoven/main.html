@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oven</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="navbar-brand">Oven
+                <small class="logo-beta">BETA</small>
+            </a>
+            <ul class="navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="/img/profile.png" class="profile-img">
+                        <span class="name">Username</span>
+                        <span class="caret">
+                            <i class="fa-sharp fa-solid fa-caret-down"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="dashboard container">
+        <div class="page-header">
+            <h1 class="pull-left">프로젝트 대쉬보드</h1>
+            <div class="pull-right">
+                <div class="search-project">
+                    <input type="text" class="form-control" placeholder="프로젝트 검색">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="btn-group">
+                    <button class="change-viewtype">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <button class="change-viewtype active">
+                        <i class="fa-solid fa-border-all"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="projects container">
+            <div class="col-md-3">
+                <ul class="nav-stack">
+                    <li class="active">
+                        <a href="#" class="loadMyProject">나의 프로젝트</a>
+                    </li>
+                    <li>
+                        <a href="#" class="loadSharedProject">나에게 공유된 프로젝트</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="project-action">
+                    <!--여기까지 했어용-->
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="page-end">
+
+    </div>
+</body>
+</html>
