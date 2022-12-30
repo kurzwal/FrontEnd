@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유열림 화면구현 본평가</title>
+    <link rel="stylesheet" href="/test/css/common.css">
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="side-nav-bar">
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="/test/asset/image/home1.png">
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="/test/asset/image/home1.png">
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="/test/asset/image/home1.png">
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="/test/asset/image/home1.png">
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="/test/asset/image/home1.png">
+            </a>
+        </div>
+        <div class="main-container">
+            <img class="main-cover" src="/test/asset/image/Rectangle 6.png"/>
+            <div class="main-nav-bar">
+                <a href="#" class="main-nav-item">HOME</a>
+                <a href="#" class="main-nav-item">COFFEE</a>
+                <a href="#" class="main-nav-item">CF</a>
+                <a href="#" class="main-nav-item">PRINT</a>
+                <a href="#" class="main-nav-item">문의하기</a>
+            </div>
+            <div class="divider"></div>
+            <div class="form-container">
+                <form id='input-form' class="form-contents">
+                    <h1 class="form-title">제품 문의하기</h1>
+                    <table class="form-table">
+                        <tr class="form-table-row">
+                            <td class="row-label">제목</td>
+                            <td colspan="3"><input id="title" name="title" class="form-input" type="text"></td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label">작성자</td>
+                            <td colspan="3"><input id="writer" name="writer" class="form-input" type="text"></td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label">답변받을 이메일</td>
+                            <td><input id="emailId" name="emailId" class="form-input" type="text"></td>
+                            <td>@</td>
+                            <td>
+                                <select id="emailAddress" name="emailAddress" class="form-select">
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="naver.com">naver.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label"></td>
+                            <td colspan="3"><textarea id="contents" name="contents" class="form-textarea" rows="3"></textarea></td>
+                        </tr>
+                    </table>
+                    <div class="form-button-container">
+                        <button class="form-btn" type="button" onclick="formSubmit();">문의하기</button>
+                        <button class="form-btn" type="reset" onclick="moveNaver();">초기화</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const formSubmit = () => {
+            const title = document.getElementById('title').value;
+            const writer = document.getElementById('writer').value;
+            const emailId = document.getElementById('emailId').value + '@' + document.getElementById('emailAddress').value;
+            const emailAddress = emailId + '@' + document.getElementById('emailAddress').value;
+            const contents = document.getElementById('contents').value;
+            
+            if (!checkNone(title)) {
+                alert('제목을 입력해주세요')
+                return;
+            }
+            if (!checkNone(writer)) {
+                alert('작성자를 입력해주세요')
+                return;
+            }
+            if (!checkNone(emailId)) {
+                alert('이메일을 입력해주세요')
+                return;
+            }
+            if (!checkNone(contents)) {
+                alert('내용을 입력해주세요')
+                return;
+            }
+            
+            alert('Submit!');
+            console.log(title);
+            console.log(writer);
+            console.log(emailAddress);
+            console.log(contents);
+            
+            const form = document.getElementById('input-form');
+            
+            location.replace('./index.html');
+        }
+        const checkNone = (value) => {
+            if (value === '' || value === null || value === undefined) {
+                return false;
+            }
+            return true;
+        }
+        const moveNaver = () => {
+            location.href = 'http://www.naver.com'
+        }
+    </script>
+</body>
+</html>
